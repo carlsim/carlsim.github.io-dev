@@ -103,7 +103,8 @@
             max-width: 100%;
             // border-bottom: $colorPink300 solid 2px;
             h2{
-                font-size: 1.250em; 
+                font-size: 1.250em;
+                font-weight: 600;
                 @media all and (min-width: $medium){
                     font-size: 1.5em;
                 } 
@@ -165,6 +166,7 @@
             max-width: 100%;
             h2{
                 font-size: 1.250em; 
+                font-weight: 600;
                 @media all and (min-width: $medium){
                     font-size: 1.5em;
                 }  
@@ -193,6 +195,7 @@
             max-width: 100%;
             h2{
                 font-size: 1.250em; 
+                font-weight: 600;
                 @media all and (min-width: $medium){
                     font-size: 1.5em;
                 } 
@@ -228,6 +231,7 @@
                 z-index: 20;
                 display: flex;
                 flex-direction: row;
+                font-weight: 500;
                 p{
                   margin: 0;
                   display: flex;
