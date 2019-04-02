@@ -25,7 +25,10 @@
             }
         }
         p{
-            font-size: 1em;
+            font-size: 0.850em;
+            @media all and (min-width: $medium){
+                font-size: 1em;
+            }
             font-weight: 500;
         }
     }
