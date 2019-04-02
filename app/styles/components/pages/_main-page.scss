@@ -26,7 +26,8 @@
 }
 
 .gradient-wrapper{
-    background: linear-gradient($colorGrey200, #fff);
+    // background: linear-gradient($colorGrey200, #fff);
+    background: #fff;
 }
 
 .headline{
@@ -34,7 +35,7 @@
     &__bg{
         height: 90vh;
         width: 100%;
-        background: $colorGrey200;
+        background: #fff;
     }
     &__content{
         position: relative;
@@ -69,13 +70,22 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            // color: $colorGrey900;
             // color: #fff;
             font-weight: 500;
             .title{
                 margin-right: 12px;
                 h1{
+                    font-size: 2.250em;
                     font-weight: 600;
+                    text-transform: uppercase;
                     margin: 0;
+                    @media all and (min-width: $medium){
+                        font-size: 3.500em;
+                    } 
+                    @media all and (min-width: $medium){
+                        font-size: 3.500em;
+                    } 
                 }
             }
             .subtitle{
@@ -92,20 +102,26 @@
 
 .about{
     &__bg{
-        // background: $colorGrey100;
+        background: #000;;
+        // transform: skewX(-5deg);
+        position: relative;
     }
     &__content{
         padding-top: 100px;
         padding-bottom: 100px;
+        font-weight: 300;
         .title-area{
             width: 300px;
             max-width: 100%;
+            background-color: $colorRedA200;
+            padding-left: 24px;
+            margin-bottom: 64px;
             // border-bottom: $colorPink300 solid 2px;
             h2{
                 font-size: 1.250em;
                 font-weight: 600;
                 @media all and (min-width: $medium){
-                    font-size: 1.5em;
+                    font-size: 1.750em;
                 } 
                 line-height: 64px;
                 margin-bottom: 16px; 
@@ -113,14 +129,15 @@
         }
         .content-area{
             // max-width: 500px; 
+            color: #fff;
             padding-top: 32px;  
             &__title{
-                text-align: center;
+                // text-align: center;
             }
             &__content{
-                text-align: center;
+                // text-align: center;
                 @media all and (min-width: $medium){
-                    text-align: center;
+                    // text-align: center;
                 }
                 p{
                     font-size: 0.875em;
@@ -149,6 +166,22 @@
     }
 }
 
+@keyframes blink{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.typer{
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
 .md-card{
     border-radius: 3px;
     &--padding{
@@ -163,17 +196,25 @@
 
 .specialization{
     &__bg{
+        background-color: #000;
     }
     &__content{
         padding-top: 100px;
         padding-bottom: 100px;
+        color: #fff;
+        font-weight: 300;
         .title-area{
+            background-color: $colorYellowA200;
+            padding-left: 24px;
+            color: #000;
             max-width: 100%;
+            width: 300px;
+            margin-bottom: 64px;
             h2{
                 font-size: 1.250em; 
                 font-weight: 600;
                 @media all and (min-width: $medium){
-                    font-size: 1.5em;
+                    font-size: 1.750em;
                 }  
                 line-height: 64px;
             }
@@ -181,6 +222,7 @@
         .content-area{
             p{
               font-size: 0.875em;
+              text-align: left;
                 @media all and (min-width: $medium){
                     font-size: 1em;
                 }
@@ -191,18 +233,24 @@
 
 .work{
     &__bg{
+        // background-color: #000;
+        background: $colorGrey900;
     }
     &__content{
         padding-top: 150px;
         padding-bottom: 150px;
+        font-weight: 300;
         .title-area{
-            // width: 275px;
+            padding-left: 24px;
+            margin-bottom: 64px;
+            width: 275px;
             max-width: 100%;
+            background: $colorCyanA200;
             h2{
                 font-size: 1.250em; 
                 font-weight: 600;
                 @media all and (min-width: $medium){
-                    font-size: 1.5em;
+                    font-size: 1.750em;
                 } 
                 line-height: 64px;
             }
@@ -228,20 +276,23 @@
               cursor: pointer;
               &__work-title{
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate( -50%, -50%);
+                // top: 50%;
+                // left: 50%;
+                // transform: translate( -50%, -50%);
+                left: 32px;
+                bottom: 24px;
                 color: #fff;
                 margin: auto;
                 z-index: 20;
                 display: flex;
                 flex-direction: row;
-                font-weight: 500;
+                // font-weight: 300;
+                // border-bottom: 2px #fff solid;
                 p{
                   margin: 0;
                   display: flex;
                   align-items: center;
-                  font-size: 1.500em;
+                  // font-size: 1em;
                 }
                 .left-area{
                     margin: auto 12px auto 0;
@@ -261,40 +312,51 @@
                 will-change: transform;
                 opacity: 0.90;
                 @media all and (min-width: $medium){
-                  opacity: 1;
+                  // opacity: 1;
                 }
                 &.sparq-learning{
-                    background: #274679;
+                    background: #000;
+                    //background: #274679;
                 }
                 &.propeller-ideas{
-                    background: #f56b21;
+                    background: #000;
+                    //background: #f56b21;
                 }
                 &.photography{
-                    background: $colorPinkA400;
+                    background: #000;
+                    //background: $colorPinkA400;
                 }
                 &.ryerson{
-                    background: #004c9b;
+                    background: #000;
+                    //background: #004c9b;
                 }
                 &.lfcc{
-                    background: #8dc63f;
+                   background: #000;
+                    //background: #8dc63f;
                 }
                 &.calcutip{
-                    background: $colorAmber500;
+                    background: #000;
+                    //background: $colorAmber500;
                 }
                 &.kakao{
-                    background: #00bcd4;
+                    background: #000;
+                    //background: #00bcd4;
                 }
                 &.tumblr{
-                    background: $colorBlueGrey900;
+                    background: #000;
+                    //background: $colorBlueGrey900;
                 }
                 &.pearson{
-                    background: $colorBlue700;
+                    background: #000;
+                    //background: $colorBlue700;
                 }
                 &.sony-centre{
-                    background: $colorTealA700;
+                    background: #000;
+                    // background: $colorTealA700;
                 }
                 &.toronto-timelapse{
-                    background: $colorBlueGrey700;
+                    background: #000;
+                    //background: $colorBlueGrey700;
                 }
               }
               &__bg-image{
@@ -347,17 +409,21 @@
               }
               &:hover{
                 z-index: 50;
-                transition: 0.42s ease-in-out;
+                transition: 0.72s ease-in-out;
                 box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.26);
                 transform: scale(1.005);
                 .block{
                   &__overlay{
-                    opacity: 0.87;
-                    transition: 0.42s ease-out;
+                    opacity: 0.72;
+                    transition: 0.72s ease-out;
                   }
                   &__bg-image{
                     transform: scale(1.35);
                     transition: 2s ease-out;
+                  }
+                  &__work-title{
+                    border-bottom: 2px $colorCyanA200 solid;
+                    transition: 0.72s ease-out;
                   }
                 }
               }
@@ -399,22 +465,23 @@
         margin: 0;
         display: flex;
         li{
-            padding: 16px;
+            padding: 0px 16px;
             transition: 0.42s ease-out;
             svg{
-                fill: $colorGrey700;
+                fill: $colorYellowA200;
             }
-            &:first-child{
-                padding-left: 0;
-            }
-            &:last-child{
-                padding-right: 0;
-            }
+            // &:first-child{
+            //     padding-left: 0;
+            // }
+            // &:last-child{
+            //     padding-right: 0;
+            // }
             &:hover{
                 transition: 0.42s ease-out;
-                svg{
-                    fill: #000;
-                }
+                // svg{
+                //     fill: $colorYellowA100;
+                // }
+                border-bottom: $colorYellowA200 2px solid;
             }
         }
     }
