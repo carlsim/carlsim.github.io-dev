@@ -267,6 +267,7 @@
                 }
             }
         }
+
         .work-area{
           // background: #fff;
           display: flex;
@@ -440,6 +441,94 @@
     }
 }
 
+.work-2{
+    &__bg{
+        // background-color: #000;
+        background: $colorGrey900;
+    }
+    &__content{
+        padding-top: 150px;
+        padding-bottom: 150px;
+        font-weight: 300;
+        .title-area{
+            padding-left: 24px;
+            margin-bottom: 64px;
+            width: 275px;
+            max-width: 100%;
+            background: $colorCyanA200;
+            h2{
+                font-size: 1.250em; 
+                font-weight: 600;
+                @media all and (min-width: $medium){
+                    font-size: 1.750em;
+                } 
+                line-height: 64px;
+            }
+        }
+        .content-area{ 
+            color: #fff;
+            p{
+                // font-size: 0.875em;
+                @media all and (min-width: $medium){
+                    font-size: 1em;
+                }
+            }
+        }
+        .company-logo-area{
+            display: flex;
+            flex-direction: column;
+            .logo-item{
+                // width: 100%;
+                flex-direction: column;
+                margin: 48px;
+                &__image{
+                    display: flex;
+                    align-items: center;
+                    justify-content:  center;
+                    min-height: 150px;
+                    img, svg{
+                        heighgt: 100px;
+                        width: 200px;
+                    }
+                }
+                &__title{
+                    text-align: center;
+                    font-weight: 500;
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact{
+    &__bg{
+        background: $colorGrey900;
+    }
+    &__content{
+        padding-top: 150px;
+        padding-bottom: 150px;
+        font-weight: 300;
+        .title-area{
+            padding-left: 24px;
+            margin-bottom: 64px;
+            width: 275px;
+            max-width: 100%;
+            background: $colorCyanA200;
+            h2{
+                font-size: 1.250em; 
+                font-weight: 600;
+                @media all and (min-width: $medium){
+                    font-size: 1.750em;
+                } 
+                line-height: 64px;
+            }
+        }
+    }
+}
+
 .item-stack{
     padding-bottom: 64px;
     margin-bottom: 64px;
@@ -466,6 +555,16 @@
 }
 
 .social-media-area{
+    &__vertical{
+        ul{
+            flex-direction: column;
+        }
+    }
+    &__horizontal{
+        ul{
+            flex-direction: row;
+        }
+    }
     ul{
         list-style-image: none;
         list-style-type: none;
