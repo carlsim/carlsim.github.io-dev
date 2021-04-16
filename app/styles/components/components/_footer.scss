@@ -8,20 +8,20 @@
     &__content{
         color: #000;
         .top-area{
-            background: #000;
+            background: $colorGrey100;
             padding: 175px 24px 32px 24px;
             @media all and (min-width: $medium){
                 padding: 300px 24px 32px 24px;
             }
         }
         .bottom-area{
-            background: #000;
+            background: #colorGrey100;
             padding: 32px 24px;
             @media all and (min-width: $medium){
                 padding: 32px 24px;
             }
             &__content{
-                color: $colorGrey600;
+                // color: $colorGrey600;
             }
         }
         p{

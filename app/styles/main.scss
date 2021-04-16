@@ -11,6 +11,7 @@
 @import './components/base/variables/_font-size.scss';
 @import './components/base/variables/_palette.scss';
 @import './components/base/variables/_containers.scss';
+@import './components/base/variables/_transitions.scss';
 
 /*-- Base Styles --*/
 @import "./components/base/_global.scss";
@@ -21,7 +22,7 @@
 
 /*-- Layout Styles --*/
 @import './components/layout/_container.scss';
-@import './components/layout/_cssgrid';
+// @import './components/layout/_cssgrid';
 @import './components/layout/_flexbox.scss';
 @import './components/layout/_flexgrid.scss';
 
@@ -29,6 +30,7 @@
 @import "./components/components/_footer.scss";
 @import "./components/components/_logo.scss";
 @import "./components/components/_item-box.scss";
+@import "./components/components/_button.scss";
 
 /*-- Pages --*/
 @import "./components/pages/_main-page.scss";

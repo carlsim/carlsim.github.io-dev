@@ -18,7 +18,7 @@ gulp.task('lint', () =>
   gulp.src([
     'app/scripts/**/*.js',
     '!node_modules/**',
-    '!app/scripts/anime.min.js'
+    '!app/scripts/anime.js'
   ])
     .pipe($.eslint())
     .pipe($.eslint.format())
@@ -90,8 +90,8 @@ gulp.task('scripts', () =>
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
-      './app/scripts/anime.min.js',
-      './app/scripts/main.js'
+      './app/scripts/anime.js',
+      './app/scripts/main.js',
       // Other scripts
     ])
       .pipe($.newer('.tmp/scripts'))
@@ -141,9 +141,10 @@ gulp.task('serve', ['scripts', 'styles'], () => {
   browserSync({
     notify: false,
     // Customize the Browsersync console logging prefix
-    logPrefix: 'WSK',
+    logPrefix: 'carL[serve]',
     // Allow scroll syncing across breakpoints
-    scrollElementMapping: ['main', '.mdl-layout'],
+    // [old] scrollElementMapping: ['main', '.mdl-layout'],
+    scrollElementMapping: ['main'],
     // Run as an https by uncommenting 'https: true'
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
@@ -164,7 +165,7 @@ gulp.task('serve:dist', ['default'], () =>
     notify: false,
     logPrefix: 'WSK',
     // Allow scroll syncing across breakpoints
-    scrollElementMapping: ['main', '.mdl-layout'],
+    scrollElementMapping: ['main'],
     // Run as an https by uncommenting 'https: true'
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.

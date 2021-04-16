@@ -56,4 +56,13 @@
 
   // My JS
   console.log('hello world!');
+
+  // let carlLogo = document.querySelector('.title svg');
+  // var animeTimeline = anime.timeline();
+  console.log('anime: ' + anime);
+
+  // animeTimeline.add({
+  //   targets: '.title svg path',
+  //   translateX: 270
+  // });
 })();
